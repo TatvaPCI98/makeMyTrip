@@ -21,18 +21,14 @@ public class Utility
 {
 	public static WebDriver driver =null;
 	
-	public static String userName;
-	public static String pwd;
-	public static String TMail;
 	
 	
-	@Parameters({"browser","url","uName", "password","ToMail"})
+	
+	@Parameters({"browser","url"})
 	@BeforeSuite(alwaysRun=true)  
-	public void setUp(@Optional("chrome")String browser, @Optional("https://www.gmail.com/") String url, @Optional("test@test.com") String uName,@Optional("test123") String password,@Optional("ToMail")  String ToMail)
+	public void setUp(@Optional("chrome")String browser, @Optional("https://www.makemytrip.com/") String url)
 	{
-		userName = uName;
-		pwd = password;
-		TMail= ToMail;
+		
 		
 		if(StringUtils.equals(browser, "firefox"))
 		{				
@@ -59,7 +55,7 @@ public class Utility
 
 	}
 	public static int randInt() {
-		return new Random().nextInt((1000 - 1) + 1) + 1;
+		return new Random().nextInt((1000000000) + 1) + 1;
 	}
 	
 	// Create common wait function for visibility of an elements

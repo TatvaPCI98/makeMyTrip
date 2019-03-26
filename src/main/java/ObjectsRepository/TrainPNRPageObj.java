@@ -14,7 +14,7 @@ public class TrainPNRPageObj
 	@FindBy(how = How.XPATH, using = ".//span[.='CHECK PNR STATUS']")
 	public WebElement btnPNRCheckStatus ;
 	
-	@FindBy(how = How.XPATH, using = ".//span[.='Trains']")
+	@FindBy(how = How.XPATH, using = "//*[@id='SW']//li[4]/a")
 	public WebElement lnkTrain ;
 	
 	@FindBy(how = How.XPATH, using = " .//a[.='CHECK STATUS']")

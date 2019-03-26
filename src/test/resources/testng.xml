@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AutomationTestSuite" verbose="5" parallel="methods">
+	<parameter name="browser" value="chrome" /><!-- browser can be firefox or chrome -->
+	<parameter name="url" value="https://www.makemytrip.com/" />
+	
+
+	<test name="Gmail" thread-count="1">
+		<classes>
+			<class name="TestActions.TC_CheckPNR"></class>
+			
+		</classes>
+	</test>
+</suite>

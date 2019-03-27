@@ -21,7 +21,7 @@ public class GetBrowser {
 	      if(chrome == null) {
 	    	  ChromeOptions options = new ChromeOptions();
 	  		options.addArguments("--disable-notifications");
-	  		options.addArguments("user-data-dir="+"C:\\Users\\pct150\\AppData\\Local\\Google\\Chrome\\User Data\\Default");
+	  		options.addArguments("user-data-dir="+System.getProperty("user.home")+"\\AppData\\Local\\Google\\Chrome\\User Data\\Default");
 	    	  chrome = new ChromeDriver(options);
 	      }
 	      return chrome;

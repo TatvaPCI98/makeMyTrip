@@ -19,7 +19,7 @@ public class TC_CheckPNR extends Utility {
 
 
 	@Test(description = "This test will Enter PNR and Verify")
-	public void LoginTest() {
+	public void CheckPNR() {
 		actions.EnterPNR(driver);
 		Assert.assertTrue(actions.verifyPNR());
 	}

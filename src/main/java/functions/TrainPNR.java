@@ -33,7 +33,8 @@ public class TrainPNR extends Utility
 			pageObj.txtPNR.sendKeys(pnr+"0");
 			waifForElementPresent(pageObj.btnChkStatus, 10);
 			pageObj.btnChkStatus.click();
-			waifForElementPresent(pageObj.lblvrfyPNR, 20);
+			Thread.sleep(10000);
+			waifForElementPresent(pageObj.lblvrfyPNR, 30);
 			pageObj.lblvrfyPNR.getText();
 
 		} catch (Exception e) {
@@ -49,7 +50,7 @@ public class TrainPNR extends Utility
 		pageObj.lblpnrNumber.getText();
 		pageObj.lblPNRStatus.getText();
 */
-		if (pageObj.lblpnrNumber.getText().contains(pnr) && pageObj.lblPNRStatus.getText().equals("This PNR is either not generated or flushed"))
+		if (pageObj.lblvrfyPNR.getText().contains(pnr) && pageObj.lblPNRStatus.getText().equals("This PNR is either not generated or flushed"))
 			return true;
 		else
 			return false;
